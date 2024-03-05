@@ -2,14 +2,15 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { BasketService } from './basket.service';
 import { CreateBasketDto } from './dto/create-basket.dto';
 import { UpdateBasketDto } from './dto/update-basket.dto';
+import { AddItemDto } from './dto/addItem.dto';
 
 @Controller('basket')
 export class BasketController {
   constructor(private readonly basketService: BasketService) {}
 
   @Post()
-  create(@Body() createBasketDto: CreateBasketDto) {
-    return this.basketService.create(createBasketDto);
+  addItemToBacket(@Body() createBasketDto: AddItemDto) {
+    return this.basketService.addItemToBacket(createBasketDto);
   }
 
   @Get()
@@ -19,7 +20,8 @@ export class BasketController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.basketService.findOne(+id);
+
+    return this.basketService.getBasketByUserId(+id);
   }
 
   @Patch(':id')
@@ -27,8 +29,8 @@ export class BasketController {
     return this.basketService.update(+id, updateBasketDto);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.basketService.remove(+id);
+  @Delete(':user/:product')
+  remove(@Param('user') user: string , @Param('product') product: string) {
+    return this.basketService.remove(+user, +product);
   }
 }

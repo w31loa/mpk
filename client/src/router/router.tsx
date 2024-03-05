@@ -4,15 +4,15 @@ import Layout from "../pages/Layout";
 import Home from "../pages/Home";
 import Info from "../pages/Info";
 import Contacts from "../pages/Contacts";
-import ServicesCategories from "../pages/ServicesCategories";
-import ProductsCategories from "../pages/ProductsCategories";
-import Products from "../pages/Products";
-import Services from "../pages/Services";
-import { Product } from "../pages/Product";
+import ServicesCategories, { serviceCategoryLoader } from "../pages/ServicesCategories";
+import ProductsCategories, { productCategoryLoader } from "../pages/ProductsCategories";
+import Products, { productsLoader } from "../pages/Products";
+import Services, { servicesLoader } from "../pages/Services";
+import { Product, productLoader } from "../pages/Product";
 import { ErrorPage } from "../pages/ErrorPage";
-import { Service } from "../pages/Service";
+import { Service, serviceLoader } from "../pages/Service";
 import Profile from "../pages/Profile";
-import Basket from "../pages/Basket";
+import Basket, { basketLoader } from "../pages/Basket";
 
 export const router = createBrowserRouter([
     {
@@ -26,28 +26,34 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'productsCategories',
-                element: <ProductsCategories/>
+                element: <ProductsCategories/>,
+                loader: productCategoryLoader
             },
             {
                 path: 'products/:categoryId',
-                element: <Products/>   
+                element: <Products/>,
+                loader: productsLoader
             },
             {
                 path: 'product/:productId',
-                element: <Product/>   
+                element: <Product/>   ,
+                loader: productLoader
             },
 
             {
                 path: 'services/:categoryId',
-                element: <Services/>   
+                element: <Services/>   ,
+                loader: servicesLoader
             },
             {
                 path: 'servicesCategories',
-                element:  <ServicesCategories/>
+                element:  <ServicesCategories/>,
+                loader: serviceCategoryLoader
             },
             {
                 path: 'service/:serviceId',
-                element: <Service/>   
+                element: <Service/>   ,
+                loader: serviceLoader
             },
             {
                 path: 'info',
@@ -58,8 +64,9 @@ export const router = createBrowserRouter([
                 element:  <Contacts/>
             },
             {
-                path: 'basket',
-                element: <Basket/>
+                path: 'basket/:userId',
+                element: <Basket/>,
+                loader: basketLoader
             },
             {
                 path: 'profile',

@@ -1,1 +1,5 @@
-export class CreateBasketDto {}
+export class CreateBasketDto {
+    userId: number
+}
+
+

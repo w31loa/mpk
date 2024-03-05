@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateProductCategoryDto } from './dto/create-product-category.dto';
 import { FileService } from 'src/file/file.service';
 import { PrismaService } from 'src/prisma/prisma.service';
@@ -12,6 +12,12 @@ export class ProductCategoryService {
     private readonly fileService: FileService){}
    
   async create(createProductCategoryDto: CreateProductCategoryDto , image) {
+    const title = createProductCategoryDto.title
+    const category = await  this.prisma.productCategory.findFirst({where: {title} })
+
+    if(category){
+      throw new BadRequestException('Такая категория уже существует')
+    }
     const filePath = await this.fileService.createFile(image , createProductCategoryDto.title, 'product',createProductCategoryDto.title  )
 
     const data={
@@ -30,7 +36,13 @@ export class ProductCategoryService {
 
   async findOne(id: number) {
 
-    const category = await this.prisma.productCategory.findUnique({where: {id} })
+    const category = await this.prisma.productCategory.findUnique({where: {id} , select:{
+      id:true,
+      title: true,
+      description: true,
+      img: true,
+      products: true
+    }})
 
     if(!category){
       throw new NotFoundException('Такая категория не найдена')

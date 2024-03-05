@@ -3,11 +3,13 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { User } from '@prisma/client';
 import * as argon2 from 'argon2'
+import { BasketService } from 'src/basket/basket.service';
 
 @Injectable()
 export class UserService {
 
-  constructor(private readonly prisma:PrismaService){}
+  constructor(private readonly prisma:PrismaService,
+              private readonly basketService:BasketService){}
 
   async create(createUserDto: CreateUserDto) {
 
@@ -20,9 +22,10 @@ export class UserService {
     const data = {
       email: createUserDto.email,
       password_hash: await argon2.hash(createUserDto.password)
-    }
-
-    return this.prisma.user.create({data});
+    } 
+    const newUser = await this.prisma.user.create({data})
+    await this.basketService.create(newUser.id)
+    return newUser;
   }
 
   async findAll() {

@@ -32,7 +32,13 @@ export class ServiceCategoryService {
 
   async findOne(id: number) {
 
-    const category = await this.prisma.serviceCategory.findUnique({where: {id} })
+    const category = await this.prisma.serviceCategory.findUnique({where: {id} , select:{
+      id: true ,
+      title:true ,
+      description:true,
+      img:true,
+      services:true
+    }})
 
     if(!category){
       throw new NotFoundException('Такой категории нет')

@@ -1,16 +1,29 @@
 import { FC } from "react"
 import Tile from "../components/Tile"
+import { instance } from "../api/axios.api"
+import { useLoaderData } from "react-router-dom"
+import { ICategory } from "../types/types"
 
-const arr = [1,2,3,4,5,6]
+
+
+
+export const serviceCategoryLoader = async ()=>{
+  const {data}= await instance.get('/service-category')
+  return data
+} 
+
 
 const  ServicesCategories:FC = () =>{
+
+  const categories = useLoaderData() as ICategory[]
+
   return (
     <div>
           <div className="flex justify-center text-red-800 text-5xl font-medium">Наши услуги</div>
 
           <div className="flex justify-between flex-wrap gap-3">
-          {arr.map((i)=>(
-              <Tile title={"Категория услуги номер"} imageName={'service.jpg'} key={i} id={i} type={'services'}/>
+          {categories.map((category,i)=>(
+              <Tile title={category.title} imageName={category.img} key={i} id={category.id} type={'services'}/>
         ))}
           </div>
     </div>

@@ -39,7 +39,7 @@ const Header:FC = () => {
                 
                 <div className="flex gap-[30px] items-center">
                      
-                    <NavLink to={'/basket'} className=''><SlBasket size={30}/></NavLink>
+                    {isAuth?<NavLink to={'/basket/'+user.user} className=''><SlBasket size={30}/></NavLink>: <></> }
                     <NavLink to={'/profile'} className='text-white' >{isAuth?(<span>Профиль</span>): (<span>Авторизация</span>)}</NavLink>
 
                 </div>

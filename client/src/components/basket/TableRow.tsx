@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import { MdDelete } from "react-icons/md";
+import { IMAGE_URL } from '../../api/axios.api';
 
 
-const TableRow = () => {
+const TableRow:FC<any> = ({title, count, price, img}) => {
 
-    const [value,setValue] = useState(1)
+    const [value,setValue] = useState(count)
 
 
     const moreValueBtnHandler=()=>{
@@ -22,10 +23,10 @@ const TableRow = () => {
   return (
     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
     <td className="p-4">
-        <img src="cat1.jpg" className="w-16 md:w-32 max-w-full max-h-full rounded-lg" alt="Apple Watch"/>
+        <img src={IMAGE_URL+img} className="w-16 md:w-32 max-w-full max-h-full rounded-lg" alt="Apple Watch"/>
     </td>
     <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
-        Монтаж крыши
+        {title}
     </td>
     <td className="px-6 py-4">
         <div className="flex items-center">
@@ -49,7 +50,7 @@ const TableRow = () => {
         </div>
     </td>
     <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
-        100 рублей
+        {price}
     </td>
     <td className="px-6 py-4">
           <MdDelete className='hover:text-slate-50'  size={30}/>

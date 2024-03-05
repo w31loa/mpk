@@ -11,7 +11,7 @@ const Auth:FC<any> = ({setIsAuth})=> {
   })
 
   const btnHandler = ()=>{
-    dispatch(login({user:'kakak'}))
+    dispatch(login({user:2}))
     toast.success('Вы успешно авторизировались!')
 
   }

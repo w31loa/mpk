@@ -5,6 +5,7 @@ import { PrismaModule } from 'src/prisma/prisma.module';
 import { FileModule } from 'src/file/file.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { BasketModule } from 'src/basket/basket.module';
 
 @Module({
   imports: [
@@ -12,7 +13,7 @@ import { join } from 'path';
       rootPath: join(__dirname, '..', 'static'),
       serveRoot: '/files',
     }),
-    PrismaModule, FileModule],
+    PrismaModule, FileModule, BasketModule],
   controllers: [UserController],
   providers: [UserService],
   exports: [UserService]

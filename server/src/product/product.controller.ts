@@ -21,10 +21,17 @@ export class ProductController {
     return this.productService.findAll();
   }
 
+  @Get('all/:id')
+  findAllByCategoryId(@Param('id') id: string) {
+    return this.productService.findAllByCategoryid(+id);
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.productService.findOne(+id);
   }
+
+
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateProductDto:Partial<Product>) {

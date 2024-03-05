@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { FC } from 'react'
 import TableRow from './TableRow'
+import { IBasket } from '../../types/types'
 
-const BasketTable = () => {
+interface IBasketParams{
+    basket:IBasket[]
+}
+
+const BasketTable:FC<any> = (data:IBasketParams) => {
+
   return (
     <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
     <thead className="text-xs text-white uppercase bg-red-950">
@@ -24,8 +30,12 @@ const BasketTable = () => {
         </tr>
     </thead>
     <tbody>
-
-            <TableRow/>
+        {
+            data.basket.map((el,i)=> (
+                
+                <TableRow title={el.product.title} count={el.count} price={el.product.price} img={el.product.img} key={i}/>
+            ))
+        }
        
     </tbody>
 </table>

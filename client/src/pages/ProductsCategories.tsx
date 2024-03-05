@@ -1,18 +1,28 @@
 import { FC } from "react"
-import {Link} from 'react-router-dom'
+import {Link, useLoaderData} from 'react-router-dom'
 import Tile from "../components/Tile"
+import { instance } from "../api/axios.api"
+import { ICategory } from "../types/types"
 
-const arr = [1,2,3,4,5,6]
+
+
+export const productCategoryLoader = async ()=>{
+  const {data}= await instance.get('/product-category')
+  return data
+} 
 
 
 const  ProductsCategories:FC = () =>{
+
+  const categories = useLoaderData() as ICategory[]
+
   return (
     <>
       <div className="flex justify-center text-red-800 text-5xl font-medium">Наша продукция</div>
 
       <div className="flex justify-between flex-wrap gap-3">
-            {arr.map((i)=>(
-          <Tile title={"Категория продукции номер "} imageName={'cat1.jpg'} key={i} id={i} type={'products'}/>
+            {categories.map((el , i)=>(
+          <Tile title={el.title} imageName={el.img} key={i} id={el.id} type={'products'}/>
           ))}
       </div>
     </>

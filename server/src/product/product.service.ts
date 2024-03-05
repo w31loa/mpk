@@ -39,6 +39,18 @@ export class ProductService {
     return await this.prisma.product.findMany();
   }
 
+  async findAllByCategoryid(productCategoryId:number){
+
+    const products = await this.prisma.product.findMany({where:{productCategoryId} })
+
+    if(!products){
+      throw new NotFoundException('Нет продукта с такой категорией')
+    }
+
+    return products
+
+  }
+
   async findOne(id: number) {
 
     const product = await this.prisma.product.findUnique({where: {id} })
