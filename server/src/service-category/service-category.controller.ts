@@ -3,7 +3,7 @@ import { ServiceCategoryService } from './service-category.service';
 import { CreateServiceCategoryDto } from './dto/create-service-category.dto';
 import { FileService } from 'src/file/file.service';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { User } from '@prisma/client';
+import { ServiceCategory, User } from '@prisma/client';
 
 @Controller('service-category')
 export class ServiceCategoryController {
@@ -31,7 +31,7 @@ export class ServiceCategoryController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateServiceCategoryDto: Partial<User>) {
+  update(@Param('id') id: string, @Body() updateServiceCategoryDto: Partial<ServiceCategory>) {
     return this.serviceCategoryService.update(+id, updateServiceCategoryDto);
   }
 

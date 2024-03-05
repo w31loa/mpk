@@ -1,8 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateProductCategoryDto } from './dto/create-product-category.dto';
 import { FileService } from 'src/file/file.service';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { User } from '@prisma/client';
+import { ProductCategory, User } from '@prisma/client';
 
 @Injectable()
 export class ProductCategoryService {
@@ -24,19 +24,40 @@ export class ProductCategoryService {
     return newCategory
   }
 
-  findAll() {
-    return `This action returns all productCategory`;
+  async findAll() {
+    return await this.prisma.productCategory.findMany();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} productCategory`;
+  async findOne(id: number) {
+
+    const category = await this.prisma.productCategory.findUnique({where: {id} })
+
+    if(!category){
+      throw new NotFoundException('Такая категория не найдена')
+    }
+
+    return category;
   }
 
-  update(id: number, updateProductCategoryDto: Partial<User>) {
-    return `This action updates a #${id} productCategory`;
+  async  update(id: number, updateProductCategoryDto: Partial<ProductCategory>) {
+
+    const category = await this.prisma.productCategory.findUnique({where: {id} })
+
+    if(!category){
+      throw new NotFoundException('Такая категория не найдена')
+    }
+
+    return this.prisma.productCategory.update({where :{ id}, data:updateProductCategoryDto});
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} productCategory`;
+  async remove(id: number) {
+
+    const category = await this.prisma.productCategory.findUnique({where: {id} })
+
+    if(!category){
+      throw new NotFoundException('Такая категория не найдена')
+    }
+
+    return await this.prisma.productCategory.delete({where: {id} });
   }
 }

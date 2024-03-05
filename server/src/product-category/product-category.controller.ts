@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, UploadedFile, UseInt
 import { ProductCategoryService } from './product-category.service';
 import { CreateProductCategoryDto } from './dto/create-product-category.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { User } from '@prisma/client';
+import { ProductCategory, User } from '@prisma/client';
 
 @Controller('product-category')
 export class ProductCategoryController {
@@ -20,13 +20,13 @@ export class ProductCategoryController {
     return this.productCategoryService.findAll();
   }
 
-  @Get(':id')
+  @Get(':id') 
   findOne(@Param('id') id: string) {
     return this.productCategoryService.findOne(+id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateProductCategoryDto: Partial<User>) {
+  update(@Param('id') id: string, @Body() updateProductCategoryDto: Partial<ProductCategory>) {
     return this.productCategoryService.update(+id, updateProductCategoryDto);
   }
 

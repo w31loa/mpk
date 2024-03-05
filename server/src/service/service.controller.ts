@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { ServiceService } from './service.service';
 import { CreateServiceDto } from './dto/create-service.dto';
-import { User } from '@prisma/client';
+import { Service, User } from '@prisma/client';
 import { FileInterceptor } from '@nestjs/platform-express';
 
 @Controller('service')
@@ -27,7 +27,7 @@ export class ServiceController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateServiceDto: Partial<User>) {
+  update(@Param('id') id: string, @Body() updateServiceDto: Partial<Service>) {
     return this.serviceService.update(+id, updateServiceDto);
   }
 

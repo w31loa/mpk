@@ -1,8 +1,8 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateServiceDto } from './dto/create-service.dto';
 import { FileService } from 'src/file/file.service';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { User } from '@prisma/client';
+import { Service, User } from '@prisma/client';
 
 @Injectable()
 export class ServiceService {
@@ -21,7 +21,7 @@ export class ServiceService {
 
 
 
-    const filePath = await this.fileService.createFile(image , createServiceDto.title, 'product',createServiceDto.title  )
+    const filePath = await this.fileService.createFile(image , createServiceDto.title, 'service',category.title  )
 
     const data={
       title: createServiceDto.title,
@@ -35,19 +35,42 @@ export class ServiceService {
     return newService
   }
 
-  findAll() {
-    return `This action returns all service`;
+  async findAll() {
+    return await this.prisma.service.findMany();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} service`;
+  async findOne(id: number) {
+
+    const service = await this.prisma.service.findUnique({where:{id}})
+
+    if(!service){
+      throw new NotFoundException('Такой услуги нету')
+    }
+
+    return service;
   }
 
-  update(id: number, updateServiceDto: Partial<User>) {
-    return `This action updates a #${id} service`;
+  async update(id: number, updateServiceDto: Partial<Service>) {
+
+    const service = await this.prisma.service.findUnique({where:{id}})
+
+    if(!service){
+      throw new NotFoundException('Такой услуги нету')
+    }
+
+    return await this.prisma.service.update({where:{id} , data: updateServiceDto});
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} service`;
+  async remove(id: number) {
+
+    const service = await this.prisma.service.findUnique({where:{id}})
+
+    if(!service){
+      throw new NotFoundException('Такой услуги нету')
+    }
+
+
+
+    return await this.prisma.service.delete({where:{id} });
   }
 }
