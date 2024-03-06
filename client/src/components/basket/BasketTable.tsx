@@ -33,7 +33,7 @@ const BasketTable:FC<any> = (data:IBasketParams) => {
         {
             data.basket.map((el,i)=> (
                 
-                <TableRow title={el.product.title} count={el.count} price={el.product.price} img={el.product.img} key={i}/>
+                <TableRow title={el.product.title} count={el.count} price={el.product.price} img={el.product.img} key={i} id={el.product.id}/>
             ))
         }
        

@@ -70,8 +70,26 @@ export class BasketService {
   findAll() {
     return `This action returns all basket`;
   }
-  update(id: number, updateBasketDto: UpdateBasketDto) {
-    return `This action updates a #${id} basket`;
+  
+  
+  async update(dto:UpdateBasketDto) {
+
+    const basket = await this.prisma.basket.findFirst({where:{userId: dto.userId} })
+
+    const productsIn = await this.prisma.productsInBasket.findFirst({where: {
+      basketId: basket.id,
+      productId: dto.productId
+    } })
+
+    return await this.prisma.productsInBasket.update({
+      where: {
+        id: productsIn.id
+      } , 
+      data: 
+        {
+          count: dto.count
+      } 
+    });
   }
 
   async remove(userId:number , productId:number) {

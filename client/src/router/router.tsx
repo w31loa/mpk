@@ -8,7 +8,7 @@ import ServicesCategories, { serviceCategoryLoader } from "../pages/ServicesCate
 import ProductsCategories, { productCategoryLoader } from "../pages/ProductsCategories";
 import Products, { productsLoader } from "../pages/Products";
 import Services, { servicesLoader } from "../pages/Services";
-import { Product, productLoader } from "../pages/Product";
+import { Product, productAction, productLoader } from "../pages/Product";
 import { ErrorPage } from "../pages/ErrorPage";
 import { Service, serviceLoader } from "../pages/Service";
 import Profile from "../pages/Profile";
@@ -37,7 +37,8 @@ export const router = createBrowserRouter([
             {
                 path: 'product/:productId',
                 element: <Product/>   ,
-                loader: productLoader
+                loader: productLoader,
+                action: productAction
             },
 
             {

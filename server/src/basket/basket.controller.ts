@@ -24,9 +24,10 @@ export class BasketController {
     return this.basketService.getBasketByUserId(+id);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateBasketDto: UpdateBasketDto) {
-    return this.basketService.update(+id, updateBasketDto);
+  @Patch()
+  update(@Body() updateBasketDto: UpdateBasketDto) {
+    console.log(updateBasketDto)
+    return this.basketService.update(updateBasketDto);
   }
 
   @Delete(':user/:product')

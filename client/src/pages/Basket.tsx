@@ -15,10 +15,6 @@ const Basket = () => {
 
 
 
-  const dispatch = useDispatch()
-  const {user, isAuth} = useSelector(state=>{
-      return state.user 
-  })
 
   const basket = useLoaderData() as IBasket[]
   return (
