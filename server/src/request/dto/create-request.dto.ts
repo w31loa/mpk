@@ -3,6 +3,7 @@ export class CreateRequestDto {
     name: string
     description: string
     userId: number
+    date: Date
     basketId?: number
     serviceId?: number  
 }
