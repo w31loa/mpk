@@ -1,17 +1,15 @@
 import React, { useState } from 'react'
 import Auth from '../components/Auth'
-import ProfileComponent from '../components/Profile'
 import { useSelector } from 'react-redux'
+import { useAuth } from '../hooks/useAuth.hook'
+import { useNavigate } from 'react-router-dom'
 
 const Profile = () => {
-  const {user, isAuth} = useSelector(state=>{
-    return state.user
-  })
+
     
   return (
     <>
-        {!!isAuth ? (<ProfileComponent/>)
-        : (<Auth/>)}
+       <Auth/>
     </>
   )
 }

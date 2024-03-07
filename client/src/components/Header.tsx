@@ -2,14 +2,26 @@ import { FC } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { SlBasket } from "react-icons/sl";
 import { useDispatch, useSelector } from 'react-redux';
+import { useAuth } from '../hooks/useAuth.hook';
+import { useUser } from '../hooks/useUser.hook';
+import { IUser, logout } from '../store/reducers/user.reducer';
+import { toast } from 'react-toastify';
+import { removeTokenFromLocalStorage } from '../helpers/localStorage.helper';
 
 const Header:FC = () => {
 
   const dispatch = useDispatch()
-  const {user, isAuth} = useSelector(state=>{
-      return state.user
-  })
 
+  const isAuth = useAuth()
+  const user = useUser()
+
+  console.log(user)
+
+  const logoutHandler = ()=>{
+    dispatch(logout())
+    removeTokenFromLocalStorage('token')
+    toast.success('You logged out!')
+  }
 
   return (
     <div className="bg-red-950 font-roboto text-white flex justify-center align-top">
@@ -39,8 +51,10 @@ const Header:FC = () => {
                 
                 <div className="flex gap-[30px] items-center">
                      
-                    {isAuth?<NavLink to={'/basket/'+user.user} className=''><SlBasket size={30}/></NavLink>: <></> }
-                    <NavLink to={'/profile'} className='text-white' >{isAuth?(<span>Профиль</span>): (<span>Авторизация</span>)}</NavLink>
+                    {isAuth?<NavLink to={'/basket/'+user?.id} className=''><SlBasket size={30}/></NavLink>: <></>}
+
+                    {isAuth?<button onClick={logoutHandler} > Выйти </button>:    <NavLink to={'/profile'} className='text-white' ><span>Авторизация</span></NavLink> }
+                
 
                 </div>
 

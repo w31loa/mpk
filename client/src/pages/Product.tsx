@@ -77,7 +77,7 @@ export const Product = () => {
 
                     <div className="text-black text-3xl mb-10">{product.description}</div>
                     <div className="text-black text-2xl  mb-5"> Цена: {product.price}₽ </div>
-                    <button type='submit' className='px-8 py-4 rounded-md bg-green-500 hover:bg-green-700 transition-colors' onClick={addBtnHandler} >Купить</button>
+                    <button type='submit' className='px-8 py-4 rounded-md bg-green-500 hover:bg-green-700 transition-colors' onClick={addBtnHandler} >Добавить в карзину</button>
 
               </Form>
 
