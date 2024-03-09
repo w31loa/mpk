@@ -1,28 +1,20 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import { Dropdown, DropdownChangeEvent } from 'primereact/dropdown';
 
 
 
-interface Country {
-    name: string;
-    code: string;
+export interface IServiceSelector {
+    name: string,
+    id: number
 }
 
-const Selector = () => {
+const Selector:FC<any> = ({selectedService, setSelectedService}) => {
 
-    const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
-    const countries: Country[] = [
-        { name: 'Работа', code: '1' },
-        { name: 'Работа1', code: '2' },
-        { name: 'Работа3', code: '3' },
-        { name: 'Работа4', code: '41' },
-        { name: 'Работа65', code: '5' },
-        { name: 'Работа363', code: '7' },
-        { name: 'Работа346', code: '8' },
-        { name: 'Работа1111', code: '11' },
+    const countries: IServiceSelector[] = [
+        { name: 'услуга 1', id: 1 },
     ];
 
-    const selectedCountryTemplate = (option: Country, props) => {
+    const selectedCountryTemplate = (option: IServiceSelector, props) => {
         if (option) {
             return (
                 <div className="flex align-items-center bg-white">
@@ -34,7 +26,7 @@ const Selector = () => {
         return <span>{props.placeholder}</span>;
     };
 
-    const countryOptionTemplate = (option: Country) => {
+    const countryOptionTemplate = (option: IServiceSelector) => {
         return (
             <div className="flex align-items-center bg-white">
                 <div>{option.name}</div>
@@ -44,7 +36,7 @@ const Selector = () => {
 
     return (
         <div className="p-2 rounded-md mb-1 flex justify-content-center">
-            <Dropdown value={selectedCountry} onChange={(e: DropdownChangeEvent) => setSelectedCountry(e.value)} options={countries} optionLabel="name" placeholder="Выберите услугу" 
+            <Dropdown value={selectedService} onChange={(e: DropdownChangeEvent) => setSelectedService(e.value)} options={countries} optionLabel="name" placeholder="Выберите услугу" 
                 filter valueTemplate={selectedCountryTemplate} itemTemplate={countryOptionTemplate} className="w-full rounded-md" />
         </div>    
     )

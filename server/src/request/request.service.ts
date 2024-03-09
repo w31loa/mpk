@@ -29,16 +29,31 @@ export class RequestService {
     return newReq;
   }
 
-  findAll() {
-    return `This action returns all request`;
+
+  async findAll() {
+    return await this.prisma.request.findMany({
+      include:{
+        basket:{
+          select:{
+            products: true
+          }
+        },
+        service: true
+      }
+    }) ;
   }
+
 
   findOne(id: number) {
     return `This action returns a #${id} request`;
   }
 
-  update(id: number, updateRequestDto: UpdateRequestDto) {
-    return `This action updates a #${id} request`;
+  async update(id: number, updateRequestDto: UpdateRequestDto) {
+    
+    return await this.prisma.request.update({
+      where: {id},
+      data: updateRequestDto
+    });
   }
 
   remove(id: number) {
