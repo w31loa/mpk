@@ -13,6 +13,8 @@ import { ErrorPage } from "../pages/ErrorPage";
 import { Service, serviceLoader } from "../pages/Service";
 import Profile from "../pages/Profile";
 import Basket, { basketLoader } from "../pages/Basket";
+import Requests, { requestsLoader } from "../pages/Requests";
+import Edit from "../pages/Edit";
 
 export const router = createBrowserRouter([
     {
@@ -72,6 +74,15 @@ export const router = createBrowserRouter([
             {
                 path: 'profile',
                 element: <Profile/>
+            },
+            {
+                path: 'requests',
+                element: <Requests/>,
+                loader: requestsLoader
+            },
+            {
+                path: 'edit',
+                element: <Edit/>
             }
         ]
     }

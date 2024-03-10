@@ -14,7 +14,7 @@ const Header:FC = () => {
 
   const isAuth = useAuth()
   const user = useUser()
-
+  const isAdmin = user?.role == 'ADMIN'
   console.log(user)
 
   const logoutHandler = ()=>{
@@ -46,10 +46,26 @@ const Header:FC = () => {
                       <li>
                         <NavLink to={'/contacts'} className={({ isActive})=> isActive ? 'text-white' : 'text-white/50'} >Контакты</NavLink>
                       </li>
+             
                     </ul> 
                 </nav>
                 
                 <div className="flex gap-[30px] items-center">
+                      {
+                        isAdmin&&(
+                          <div className=''>
+                            <li>
+                              <NavLink to={'/requests'} className={({ isActive})=> isActive ? 'text-white' : 'text-white/50'} >Заказы</NavLink>
+                            </li>
+                            <li>
+                             <NavLink to={'/edit'} className={({ isActive})=> isActive ? 'text-white' : 'text-white/50'} >Редактирование</NavLink>
+                            </li>
+                          
+                          </div>
+
+                        
+                        )
+                      }
                      
                     {isAuth?<NavLink to={'/basket/'+user?.id} className=''><SlBasket size={30}/></NavLink>: <></>}
 

@@ -36,3 +36,25 @@ export interface ICategory{
     id:number
     product:IProduct
   }
+
+  
+export interface IRequest{
+  id:number
+  phoneNumber: string
+  name:string
+  description: string
+  status: string
+  date: string
+  userId: number
+  basketId: number
+  serviceId: number
+  basket:{
+    id:number
+    userId:number
+    products: {
+      product:IProduct
+    }[]
+    
+  },
+  service?: IService
+}

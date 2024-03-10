@@ -6,6 +6,8 @@ import './index.css'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { ModalState } from './context/modal.context.tsx'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 

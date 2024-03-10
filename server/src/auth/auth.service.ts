@@ -14,6 +14,7 @@ export class AuthService {
     ){}
 
     async login(dto:LoginDto){
+        console.log(dto)
         const user = await this.validateUser(dto)
         const token = this.generateToken(user)
 
@@ -23,12 +24,15 @@ export class AuthService {
 
     async validateUser(dto:LoginDto){
         const user = await this.userService.findOneByEmail(dto.email)
+        if(!user){
+            throw new UnauthorizedException('Email or password are wrong') 
+
+        }
         const isPasswordVerify = await argon2.verify(user.password_hash, dto.password)
         if(user && isPasswordVerify){
             return user
         }
-
-        throw new UnauthorizedException('Email or password are wrong') 
+        
     }
 
     async generateToken(user:User){

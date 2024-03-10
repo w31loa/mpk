@@ -34,11 +34,18 @@ export class RequestService {
     return await this.prisma.request.findMany({
       include:{
         basket:{
-          select:{
-            products: true
+          include:{
+            products:{
+              select:{
+                product:true
+              }
+            }
           }
         },
         service: true
+      },
+      orderBy:{
+        status: 'desc'
       }
     }) ;
   }

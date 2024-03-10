@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import { Dropdown, DropdownChangeEvent } from 'primereact/dropdown';
+import { instance } from "../../api/axios.api";
 
 
 
@@ -8,11 +9,19 @@ export interface IServiceSelector {
     id: number
 }
 
+
+const {data} = await instance.get('/service')
+
 const Selector:FC<any> = ({selectedService, setSelectedService}) => {
 
-    const countries: IServiceSelector[] = [
-        { name: 'услуга 1', id: 1 },
-    ];
+    const services: IServiceSelector[] = data.map((el:any)=>{
+        return {
+         name: el.title,
+         id: +el.id
+        }
+    })
+
+
 
     const selectedCountryTemplate = (option: IServiceSelector, props) => {
         if (option) {
@@ -36,7 +45,7 @@ const Selector:FC<any> = ({selectedService, setSelectedService}) => {
 
     return (
         <div className="p-2 rounded-md mb-1 flex justify-content-center">
-            <Dropdown value={selectedService} onChange={(e: DropdownChangeEvent) => setSelectedService(e.value)} options={countries} optionLabel="name" placeholder="Выберите услугу" 
+            <Dropdown value={selectedService} onChange={(e: DropdownChangeEvent) => setSelectedService(e.value)} options={services} optionLabel="name" placeholder="Выберите услугу" 
                 filter valueTemplate={selectedCountryTemplate} itemTemplate={countryOptionTemplate} className="w-full rounded-md" />
         </div>    
     )

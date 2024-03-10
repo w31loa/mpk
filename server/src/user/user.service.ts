@@ -54,17 +54,16 @@ export class UserService implements OnModuleInit{
     } })
 
     if(!admin){
-    
-
-
       const data = {
-        email: "admin",
+        email: "admin@mail.com",
         password_hash: await argon2.hash('root'),
         role:"ADMIN" as $Enums.Role
 
       }
 
       const newAdmin = await this.prisma.user.create({data})
+      await this.basketService.create(newAdmin.id)
+
       console.log(newAdmin)
     }
 
