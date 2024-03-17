@@ -33,21 +33,33 @@ export const Service = () => {
 
   return (
         
-    <div className=' mt-10 border-2 py-[100px] px-[20px] bg-red-50/30 rounded-lg' >
-      <div className="text-black text-5xl text-left mb-5 "> {service.title}</div>
+    <div className=' mt-10 border-2 py-[100px]  px-[20px]bg-[#f2f2f2] container mx-auto' >
+      <div className="flex justify-between">
+          <img   width={'600px'} src={IMAGE_URL+service.img} alt="Sunset in the mountains"/>
 
-          <div className="flex gap-[20%]">
+          <div className="w-1/2">
 
-             <img   width={'600px'} src={IMAGE_URL+service.img} alt="Sunset in the mountains"/>
+            <div className="text-black text-5xl text-left mb-5 "> {service.title}</div>
 
-              <div className="">
-                    <div className="text-black text-3xl mb-10">{service.description}</div>
-                    <div className="text-black text-2xl  mb-5"> Цена: {service.price} ₽ </div>
-                    <button className='px-8 py-4 rounded-md bg-green-500 hover:bg-green-700 transition-colors' onClick={openModalHandler}>Заказать</button>
+            <div className="">
+            <div className="text-black text-3xl mb-10">
+                    <div className="text-2xl">Описание:</div>
+                    <div className="text-xl text-gray-500 pl-5">
+                      {service.description}
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quidem fugiat, repellat minus saepe dolorem ad possimus similique aperiam suscipit repellendus quam quae voluptatibus, unde itaque! Cum iste sed voluptatum.
+                    </div>
+                    
+                  </div>
+                  <div className="text-black text-2xl  mb-5"> Цена: {service.price} ₽ </div>
+                  <button className='px-8 py-4 btn-black' onClick={openModalHandler}>Заказать</button>
 
-              </div>
+            </div>
 
           </div>
+
+      </div>
+
+       
     
         {
           modal&&

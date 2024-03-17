@@ -9,22 +9,22 @@ interface IBasketParams{
 const BasketTable:FC<any> = (data:IBasketParams) => {
 
   return (
-    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-    <thead className="text-xs text-white uppercase bg-red-950">
+    <table className="w-full text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <thead className="text-xs text-white uppercase  bg-black">
         <tr>
-            <th scope="col" className="px-16 py-3">
+            <th scope="col" className="px-16 py-5">
                 <span className="sr-only"></span>
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-6 py-5">
                 Название
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-6 py-5">
                 Количество
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-6 py-5">
                 Цена
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-6 py-5">
                 
             </th>
         </tr>

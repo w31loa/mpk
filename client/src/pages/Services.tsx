@@ -22,9 +22,13 @@ const  Services:FC<any> = () =>{
 
   return (
     <div>
-          <div className="flex justify-center text-red-800 text-4xl font-normal mt-10">{category.title}</div>
+                  <img className="absolute -z-10 top-[-204px]" src="/home/head.webp" alt="" />
+      <div className="container flex items-center h-[300px] mx-auto">
+       <div className="text-white font-medium text-5xl  text-center  " >{category.title}</div>
 
-          <div className="flex justify-between flex-wrap">
+      </div>
+
+          <div className="flex justify-between flex-wrap container mx-auto mt-20" >
           {services?.map((service,i)=>(
          <Tile title={service.title} imageName={service.img} key={i} id={service.id} type={'service'}/>
         ))}

@@ -22,9 +22,13 @@ const  Products:FC<any> = () =>{
     const products = category.products
   return (
     <div>
-          <div className="flex justify-center text-red-800 text-4xl font-normal mt-10">{category.title}</div>
+               <img className="absolute -z-10 top-[-204px]" src="/home/head.webp" alt="" />
+      <div className="container flex items-center h-[300px] mx-auto">
+       <div className="text-white font-medium text-5xl  text-center  " >{category.title}</div>
 
-          <div className="flex justify-between flex-wrap">
+      </div>
+
+          <div className="flex justify-between flex-wrap container mx-auto mt-20">
           {products?.map((product, i)=>(
          <Tile title={product.title} imageName={product.img} key={i} id={product.id} type={'product'}/>
         ))}

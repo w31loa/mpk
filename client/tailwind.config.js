@@ -6,10 +6,16 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: ['Roboto', 'sans-serif']
+      fontFamily: {
+        hind: ["Hind"],
+        // Add more custom font families as needed
+      },
     },
   },
   plugins: [
+
+      require('tailwindcss-animated'),
+
     require('@tailwindcss/forms'),
   ],
 }

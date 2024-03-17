@@ -18,9 +18,13 @@ const  ProductsCategories:FC = () =>{
 
   return (
     <>
-      <div className="flex justify-center text-red-800 text-5xl font-medium">Наша продукция</div>
+      <img className="absolute -z-10 top-[-204px]" src="/home/head.webp" alt="" />
+      <div className="container flex items-center h-[300px] mx-auto">
+       <div className="text-white font-medium text-5xl  text-center  " >Наша продукция</div>
 
-      <div className="flex justify-between flex-wrap gap-3">
+      </div>
+
+      <div className="flex justify-between flex-wrap gap-3 container mx-auto mt-20">
             {categories.map((el , i)=>(
           <Tile title={el.title} imageName={el.img} key={i} id={el.id} type={'products'}/>
           ))}

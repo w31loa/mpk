@@ -15,6 +15,7 @@ import Profile from "../pages/Profile";
 import Basket, { basketLoader } from "../pages/Basket";
 import Requests, { requestsLoader } from "../pages/Requests";
 import Edit from "../pages/Edit";
+import Works from "../pages/Works";
 
 export const router = createBrowserRouter([
     {
@@ -61,6 +62,10 @@ export const router = createBrowserRouter([
             {
                 path: 'info',
                 element:  <Info/>
+            },
+            {
+                path: 'works',
+                element:  <Works/>
             },
             {
                 path: 'contacts',

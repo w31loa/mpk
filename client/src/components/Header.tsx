@@ -20,18 +20,17 @@ const Header:FC = () => {
   const logoutHandler = ()=>{
     dispatch(logout())
     removeTokenFromLocalStorage('token')
-    toast.success('You logged out!')
   }
 
   return (
-    <div className="bg-red-950 font-roboto text-white flex justify-center align-top">
+    <div className="bg-black font-roboto text-white flex justify-center align-top uppercase">
         <div className="container ">
 
-            <header className='flex items-center justify-between  p-4 shadow-sm backdrop-blur-sm'>
+            <header className='flex items-center justify-between  p-6 shadow-sm backdrop-blur-sm'>
                 <nav>
-                    <ul className='flex items-center gap-5 ml-auto mr-10 text-white '>
+                    <ul className='flex items-center gap-8 ml-auto mr-10 text-white border-b-2 border-white text-lg'>
                       <li>
-                          <NavLink to={'/'} className={({ isActive})=> isActive ? 'text-white' : 'text-white/50'} >Главная</NavLink>
+                          <NavLink to={'/'} className={({ isActive})=> isActive ? 'text-white border-b-2 border-black' : 'text-white/50' + ''} >Главная</NavLink>
                       </li>
                       <li>
                           <NavLink  to={'/productsCategories'} className={({ isActive})=> isActive ? 'text-white' : 'text-white/50'} >Продукция</NavLink>
@@ -42,6 +41,9 @@ const Header:FC = () => {
         
                       <li>
                         <NavLink to={'/info'} className={({ isActive})=> isActive ? 'text-white' : 'text-white/50'} > Доставка и оплата</NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={'/works'} className={({ isActive})=> isActive ? 'text-white' : 'text-white/50'} > Наши работы</NavLink>
                       </li>
                       <li>
                         <NavLink to={'/contacts'} className={({ isActive})=> isActive ? 'text-white' : 'text-white/50'} >Контакты</NavLink>

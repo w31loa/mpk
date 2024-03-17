@@ -64,20 +64,29 @@ export const Product = () => {
 
     
     
-    <div className=' mt-10 border-2 py-[100px] px-[20px] bg-red-50/30' >
-      <div className="text-black text-5xl text-left mb-5 ">{product.title}</div>
+    <div className=' mt-10 border-2 py-[100px] px-[20px] bg-[#f2f2f2] container mx-auto' >
 
-          <div className="flex gap-[20%]">
+          <div className="flex  justify-between">
 
+            
              <img   width={'600px'} src={IMAGE_URL+product.img} alt="Sunset in the mountains"/>
 
-              <Form method='POST' action={'/product/'+ product.id}>
+              <Form method='POST' className='w-1/2' action={'/product/'+ product.id}>
+                  <div className="text-black text-5xl font-bold text-left mb-7 ">{product.title}</div>
+
                     <input type="hidden" name="productId" value={product.id}/>
                     <input type="hidden" name="userId" value={Number(Object.values(user)[0])}/>
 
-                    <div className="text-black text-3xl mb-10">{product.description}</div>
+                    <div className="text-black text-3xl mb-10">
+                      <div className="text-2xl">Описание:</div>
+                      <div className="text-xl text-gray-500 pl-5">
+                        {product.description}
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quidem fugiat, repellat minus saepe dolorem ad possimus similique aperiam suscipit repellendus quam quae voluptatibus, unde itaque! Cum iste sed voluptatum.
+                      </div>
+                      
+                    </div>
                     <div className="text-black text-2xl  mb-5"> Цена: {product.price}₽ </div>
-                    <button type='submit' className='px-8 py-4 rounded-md bg-green-500 hover:bg-green-700 transition-colors' onClick={addBtnHandler} >Добавить в карзину</button>
+                    <button type='submit' className='px-8 py-4 btn-black' onClick={addBtnHandler} >Добавить в карзину</button>
 
               </Form>
 

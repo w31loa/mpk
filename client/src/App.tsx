@@ -26,7 +26,6 @@ function App() {
         }
     }catch(err:any){
       const error = err.response?.data.message
-      toast.error(error.toString())
     }
   }
 

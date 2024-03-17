@@ -97,7 +97,7 @@ const registrationHandler = async(e:React.FormEvent<HTMLFormElement>)=>{
           
                   
                   <div className=" flex flex-col gap-3">
-                      <button type="submit" className="btn btn-red text-center text-lg " >Войти</button>
+                      <button type="submit" className="btn btn-black  text-center text-lg " >Войти</button>
                       <button
                       onClick={()=> setIsLogin(!isLogin)} className="text-slate-600 hover:text-slate-400">
                           Создать аккаунт!
@@ -108,7 +108,7 @@ const registrationHandler = async(e:React.FormEvent<HTMLFormElement>)=>{
           
 
                   <div className=" flex flex-col gap-3">
-                  <button type="submit" className="btn btn-red text-lg ">Зарегестрироваться</button>
+                  <button type="submit" className="btn btn-black text-lg ">Зарегестрироваться</button>
                     <button
                     onClick={()=> setIsLogin(!isLogin)} className="text-slate-600 hover:text-slate-400">
                         У меня уже есть аккаунт!

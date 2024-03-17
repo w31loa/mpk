@@ -25,6 +25,9 @@
     .btn-red{
         @apply bg-rose-900 hover:bg-rose-800 
     }
+    .btn-black{
+        @apply bg-black hover:bg-slate-800 
+    }
 
     .btn-green{
         @apply bg-green-600 hover:bg-green-800
