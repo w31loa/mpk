@@ -18,7 +18,7 @@ const  ServicesCategories:FC = () =>{
   const categories = useLoaderData() as ICategory[]
 
   return (
-    <div>
+    <div  className="mb-20">
                <img className="absolute -z-10 top-[-204px]" src="/home/head.webp" alt="" />
       <div className="container flex items-center h-[300px] mx-auto">
        <div className="text-white font-medium text-5xl  text-center  " >Наши услуги</div>

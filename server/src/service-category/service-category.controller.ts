@@ -30,9 +30,11 @@ export class ServiceCategoryController {
     return this.serviceCategoryService.findOne(+id);
   }
 
+
+  @UseInterceptors(FileInterceptor('image'))
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateServiceCategoryDto: Partial<ServiceCategory>) {
-    return this.serviceCategoryService.update(+id, updateServiceCategoryDto);
+  update(@Param('id') id: string, @Body() updateServiceCategoryDto: Partial<ServiceCategory> , @UploadedFile()image?) {
+    return this.serviceCategoryService.update(+id, updateServiceCategoryDto, image);
   }
 
   @Delete(':id')

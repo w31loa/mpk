@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ModalState } from './context/modal.context.tsx'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+import 'flowbite'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

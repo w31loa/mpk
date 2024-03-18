@@ -9,9 +9,10 @@ import { ProductCategoryModule } from './product-category/product-category.modul
 import { ServiceCategoryModule } from './service-category/service-category.module';
 import { BasketModule } from './basket/basket.module';
 import { RequestModule } from './request/request.module';
+import { WorksModule } from './works/works.module';
 
 @Module({
-  imports: [UserModule, PrismaModule, ServiceModule, ProductModule, AuthModule, FileModule, ProductCategoryModule, ServiceCategoryModule, BasketModule, RequestModule],
+  imports: [UserModule, PrismaModule, ServiceModule, ProductModule, AuthModule, FileModule, ProductCategoryModule, ServiceCategoryModule, BasketModule, RequestModule, WorksModule],
   controllers: [],
   providers: [],
 })

@@ -53,7 +53,7 @@ const deleteBtnHandler = (userId:number, id:number)=>{
 }
 
   return (
-<tr className={"bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 "+(visible==false?"hidden":'')}>
+<tr className={"bg-white border-b   hover:bg-gray-200  "+(visible==false?"hidden":'')}>
   
         <td className="p-4">
             <img src={IMAGE_URL+img} className="w-16 md:w-32 max-w-full max-h-full rounded-lg" alt="Apple Watch"/>
@@ -89,7 +89,7 @@ const deleteBtnHandler = (userId:number, id:number)=>{
         <td className="px-6 py-4">
             <button onClick={()=> { 
                 deleteBtnHandler(userId,id)
-            }} ><MdDelete className='hover:text-slate-50'  size={30}/></button>
+            }} ><MdDelete className='hover:text-slate-400'  size={30}/></button>
             
         </td>
    

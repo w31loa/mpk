@@ -21,7 +21,7 @@ const  Products:FC<any> = () =>{
     const category = useLoaderData() as ICategory
     const products = category.products
   return (
-    <div>
+    <div className="mb-20">
                <img className="absolute -z-10 top-[-204px]" src="/home/head.webp" alt="" />
       <div className="container flex items-center h-[300px] mx-auto">
        <div className="text-white font-medium text-5xl  text-center  " >{category.title}</div>

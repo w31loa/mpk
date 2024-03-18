@@ -25,9 +25,10 @@ export class ProductCategoryController {
     return this.productCategoryService.findOne(+id);
   }
 
+  @UseInterceptors(FileInterceptor('image'))
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateProductCategoryDto: Partial<ProductCategory>) {
-    return this.productCategoryService.update(+id, updateProductCategoryDto);
+  update(@Param('id') id: string, @Body() updateProductCategoryDto: Partial<ProductCategory> , @UploadedFile()image? ) {
+    return this.productCategoryService.update(+id, updateProductCategoryDto , image);
   }
 
   @Delete(':id')

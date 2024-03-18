@@ -26,9 +26,16 @@ export class ServiceController {
     return this.serviceService.findOne(+id);
   }
 
+  @Get('all/:id')
+  findAllByCategoryId(@Param('id') id: string) {
+    return this.serviceService.findAllByCategoryid(+id);
+  }
+
+
+  @UseInterceptors(FileInterceptor('image'))
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateServiceDto: Partial<Service>) {
-    return this.serviceService.update(+id, updateServiceDto);
+  update(@Param('id') id: string, @Body() updateServiceDto: Partial<Service>, @UploadedFile()image?) {
+    return this.serviceService.update(+id, updateServiceDto, image);
   }
 
   @Delete(':id')

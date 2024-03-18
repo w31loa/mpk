@@ -8,12 +8,18 @@ export interface ICategory{
   }
 
 
+  export interface IWork{
+    id: number
+    title: string
+    img:string
+  }
+
   export interface IProduct{
     id:number
     title:string
     productCategoryId: number
     description: string
-    price: number
+    price: string
     img:string
   }
 
@@ -53,7 +59,8 @@ export interface IRequest{
     userId:number
     products: {
       product:IProduct
-    }[]
+      count: number
+    }[],
     
   },
   service?: IService

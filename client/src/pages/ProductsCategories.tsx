@@ -17,7 +17,7 @@ const  ProductsCategories:FC = () =>{
   const categories = useLoaderData() as ICategory[]
 
   return (
-    <>
+    <div  className="mb-20">
       <img className="absolute -z-10 top-[-204px]" src="/home/head.webp" alt="" />
       <div className="container flex items-center h-[300px] mx-auto">
        <div className="text-white font-medium text-5xl  text-center  " >Наша продукция</div>
@@ -29,7 +29,7 @@ const  ProductsCategories:FC = () =>{
           <Tile title={el.title} imageName={el.img} key={i} id={el.id} type={'products'}/>
           ))}
       </div>
-    </>
+    </div>
 
   )
 }

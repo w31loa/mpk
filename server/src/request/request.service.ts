@@ -37,7 +37,8 @@ export class RequestService {
           include:{
             products:{
               select:{
-                product:true
+                product:true,
+                count: true
               }
             }
           }

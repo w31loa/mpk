@@ -35,7 +35,6 @@ export class ServiceCategoryService {
     const category = await this.prisma.serviceCategory.findUnique({where: {id} , select:{
       id: true ,
       title:true ,
-      description:true,
       img:true,
       services:true
     }})
@@ -47,12 +46,18 @@ export class ServiceCategoryService {
     return category;
   }
 
-  async update(id: number, updateServiceCategoryDto:Partial<ServiceCategory>) {
+  async update(id: number, updateServiceCategoryDto:Partial<ServiceCategory> , image?) {
 
     const category = await this.prisma.serviceCategory.findUnique({where: {id} })
 
     if(!category){
       throw new NotFoundException('Такой категории нет')
+    }
+
+    if(image){
+      const filePath = await this.fileService.createFile(image , updateServiceCategoryDto.title, 'service',updateServiceCategoryDto.title  )
+      updateServiceCategoryDto.img = filePath
+      console.log(filePath)
     }
 
     return await this.prisma.serviceCategory.update({where:{id} , data: updateServiceCategoryDto});

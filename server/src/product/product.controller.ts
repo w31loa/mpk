@@ -32,10 +32,10 @@ export class ProductController {
   }
 
 
-
+  @UseInterceptors(FileInterceptor('image'))
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateProductDto:Partial<Product>) {
-    return this.productService.update(+id, updateProductDto);
+  update(@Param('id') id: string, @Body() updateProductDto:Partial<Product> , @UploadedFile()image?) {
+    return this.productService.update(+id, updateProductDto, image);
   }
 
   @Delete(':id')

@@ -15,7 +15,12 @@ import Profile from "../pages/Profile";
 import Basket, { basketLoader } from "../pages/Basket";
 import Requests, { requestsLoader } from "../pages/Requests";
 import Edit from "../pages/Edit";
-import Works from "../pages/Works";
+import Works, { worksLoader } from "../pages/Works";
+import ServiceCategoryForm from "../components/admin/serviceCategory/ServiceCategoryForm";
+import ServiceForm from "../components/admin/service/ServiceForm";
+import ProductCategoryForm from "../components/admin/productCategory/ProductCategoryForm";
+import ProductForm from "../components/admin/product/ProductForm";
+import WorksForm from "../components/admin/works/WorksForm";
 
 export const router = createBrowserRouter([
     {
@@ -65,7 +70,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'works',
-                element:  <Works/>
+                element:  <Works/>,
+                loader: worksLoader
             },
             {
                 path: 'contacts',
@@ -87,7 +93,29 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'edit',
-                element: <Edit/>
+                element: <Edit/>,
+                children:[
+                    {
+                        path: 'serviceCategoryForm',
+                        element: <ServiceCategoryForm/>
+                    },
+                    {
+                        path: 'serviceForm',
+                        element: <ServiceForm/>
+                    },
+                    {
+                        path: 'poductCategoryForm',
+                        element: <ProductCategoryForm/>
+                    },
+                    {
+                        path: 'productForm',
+                        element: <ProductForm/>
+                    },
+                    {
+                        path: 'worksForm',
+                        element: <WorksForm/>
+                    }
+                ]
             }
         ]
     }

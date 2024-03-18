@@ -39,7 +39,6 @@ export class ProductCategoryService {
     const category = await this.prisma.productCategory.findUnique({where: {id} , select:{
       id:true,
       title: true,
-      description: true,
       img: true,
       products: true
     }})
@@ -51,12 +50,18 @@ export class ProductCategoryService {
     return category;
   }
 
-  async  update(id: number, updateProductCategoryDto: Partial<ProductCategory>) {
+  async  update(id: number, updateProductCategoryDto: Partial<ProductCategory> , image?) {
 
     const category = await this.prisma.productCategory.findUnique({where: {id} })
 
     if(!category){
       throw new NotFoundException('Такая категория не найдена')
+    }
+
+    if(image){
+      const filePath = await this.fileService.createFile(image , updateProductCategoryDto.title, 'product',updateProductCategoryDto.title  )
+      updateProductCategoryDto.img = filePath
+      console.log(filePath)
     }
 
     return this.prisma.productCategory.update({where :{ id}, data:updateProductCategoryDto});

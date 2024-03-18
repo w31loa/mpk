@@ -62,24 +62,36 @@ export class ProductService {
     return product;
   }
 
-  async update(id: number, updateProductDto: Partial<Product>) {
+  async update(id: number, updateProductDto: Partial<Product> , image?) {
 
     const product = await this.prisma.product.findUnique({where: {id} })
+    const category = await this.prisma.productCategory.findFirst({
+      where:{
+        products:{
+          some:{
+            id
+          }
+        }
+      }
+    })
 
     if(!product){
       throw new NotFoundException('Такого продукта нет')
     }
+    if(image){
+      const filePath = await this.fileService.createFile(image , updateProductDto.title, 'product',category.title  )
+      updateProductDto.img = filePath
+      console.log(filePath)
+    }
+    console.log(category)
 
     return await this.prisma.product.update({where: {id} , data: updateProductDto });
   }
 
   async remove(id: number) {
-
+    console.log(id)
     const product = await this.prisma.product.findUnique({where: {id} })
-
-    if(!product){
-      throw new NotFoundException('Такого продукта нет')
-    }
+    console.log(product)
 
     return await this.prisma.product.delete({where: {id } });
   }

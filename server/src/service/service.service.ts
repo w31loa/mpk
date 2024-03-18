@@ -50,12 +50,46 @@ export class ServiceService {
     return service;
   }
 
-  async update(id: number, updateServiceDto: Partial<Service>) {
+
+  async findAllByCategoryid(productCategoryId:number){
+
+    const products = await this.prisma.service.findMany({where:{
+      serviceCategory: {
+        id: productCategoryId
+      }
+    } })
+
+    if(!products){
+      throw new NotFoundException('Нет услуги с такой категорией')
+    }
+
+    return products
+
+  }
+
+  async update(id: number, updateServiceDto: Partial<Service>, image?) {
 
     const service = await this.prisma.service.findUnique({where:{id}})
+    const category = await this.prisma.serviceCategory.findFirst({
+      where:{
+        services:{
+          some:{
+            id
+          }
+        }
+      }
+    })
+
 
     if(!service){
       throw new NotFoundException('Такой услуги нету')
+    }
+    
+
+    if(image){
+      const filePath = await this.fileService.createFile(image , updateServiceDto.title, 'service',category.title  )
+      updateServiceDto.img = filePath
+      console.log(filePath)
     }
 
     return await this.prisma.service.update({where:{id} , data: updateServiceDto});

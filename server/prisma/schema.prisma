@@ -28,7 +28,6 @@ model User{
 model ServiceCategory{
   id Int @default(autoincrement()) @id
   title String
-  description String
   img String
   services Service[]
 }
@@ -36,7 +35,7 @@ model ServiceCategory{
 model Service{
   id Int @default(autoincrement()) @id
   title String
-  serviceCategory ServiceCategory @relation(fields: [serviceId], references: [id])
+  serviceCategory ServiceCategory @relation(fields: [serviceId], references: [id] , onDelete: Cascade )
   serviceId Int
 
   description String
@@ -51,7 +50,6 @@ model Service{
 model ProductCategory{
   id Int @default(autoincrement()) @id
   title String
-  description String
   img String
   products Product[]  
 }
@@ -59,7 +57,7 @@ model ProductCategory{
 model Product{
   id Int @default(autoincrement()) @id
   title String
-  productCategory ProductCategory @relation(fields: [productCategoryId], references: [id])
+  productCategory ProductCategory @relation(fields: [productCategoryId], references: [id] , onDelete: Cascade)
   productCategoryId Int 
   description String
   price String
@@ -74,7 +72,7 @@ model ProductsInBasket{
   basket Basket @relation(fields: [basketId],references: [id])
   basketId Int
 
-  product Product @relation(fields: [productId], references: [id])
+  product Product @relation(fields: [productId], references: [id] , onDelete: Cascade)
   productId Int
 
   count Int
@@ -113,6 +111,12 @@ model Request{
   service Service? @relation(fields: [serviceId], references: [id])
   serviceId Int? 
 
+}
+
+model Works{
+  id Int @default(autoincrement()) @id
+  title String
+  img String
 }
  
 

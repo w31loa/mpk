@@ -22,10 +22,10 @@ const statusBtnHandler = (id:number)=>{
 const RequestTableRow = ({request}:IProps ) => {
     
     
-    const [status, setStatus] = useState("Закончить")
+    const [status, setStatus] = useState("Закрыть")
 
   return (
-    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+    <tr className="border-b bg-gray-800 dark:border-gray-700">
         <th scope="row" className="px-2 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
         {request.id}
         </th>
@@ -44,7 +44,7 @@ const RequestTableRow = ({request}:IProps ) => {
             <ul>
                 {
                     request.basket.products.map((el, i) => (
-                        <li>{el.product.title}</li>
+                        <li>{el.product.title} - {el.count}</li>
                     ))
                 }
             </ul>
@@ -70,15 +70,15 @@ const RequestTableRow = ({request}:IProps ) => {
         </td>
         <td className="px-6 py-4">
             {
-                request.status=="WORKING"&& status=='Закончить'?(
+                request.status=="WORKING"&& status=='Закрыть'?(
                      <button onClick={()=> {
                         statusBtnHandler(request.id) 
                         setStatus('Выполнен')
-                     } } className="font-medium text-blue-600 dark:text-blue-500 hover:underline"> Закончить</button>
+                     } } className="font-medium text-blue-600 dark:text-blue-500 hover:underline"> Закрыть</button>
                     
                 ):
                 (
-                    <>Выволнен</>
+                    <>Закрыт</>
                 )
             }
         </td>
