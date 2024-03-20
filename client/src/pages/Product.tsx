@@ -81,7 +81,6 @@ export const Product = () => {
                       <div className="text-2xl">Описание:</div>
                       <div className="text-xl text-gray-500 pl-5">
                         {product.description}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quidem fugiat, repellat minus saepe dolorem ad possimus similique aperiam suscipit repellendus quam quae voluptatibus, unde itaque! Cum iste sed voluptatum.
                       </div>
                       
                     </div>

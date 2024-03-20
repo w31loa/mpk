@@ -1,0 +1,836 @@
+<?xml version='1.0'?>
+<?mso-application progid='Excel.Sheet'?>
+<Workbook xmlns='urn:schemas-microsoft-com:office:spreadsheet'
+xmlns:o='urn:schemas-microsoft-com:office:office'
+xmlns:x='urn:schemas-microsoft-com:office:excel'
+xmlns:ss='urn:schemas-microsoft-com:office:spreadsheet'
+xmlns:html='http://www.w3.org/TR/REC-html40'>
+<DocumentProperties xmlns='urn:schemas-microsoft-com:office:office'>
+<Author>Dimas</Author>
+<LastAuthor>Dimas</LastAuthor>
+<Created>2008-04-10T14:18:34Z</Created>
+<Company>-</Company>
+<Version>11.5606</Version>
+</DocumentProperties>
+<ExcelWorkbook xmlns='urn:schemas-microsoft-com:office:excel'>
+<WindowHeight>10230</WindowHeight>
+<WindowWidth>14235</WindowWidth>
+<WindowTopX>480</WindowTopX>
+<WindowTopY>15</WindowTopY>
+<ProtectStructure>False</ProtectStructure>
+<ProtectWindows>False</ProtectWindows>
+</ExcelWorkbook>
+<Styles>
+<Style ss:ID='Default' ss:Name='Normal'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders/>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' />
+<Interior/>
+<NumberFormat/>
+<Protection/>
+</Style>
+<Style ss:ID='s123k1'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Top' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+<Style ss:ID='s123k'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Top' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/><Interior ss:Color="#FFEB00" ss:Pattern="Solid"/></Style>
+<Style ss:ID='s12'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='12'/></Style>
+<Style ss:ID='sBold'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+<Style ss:ID='sBoldNoBorder'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+<Style ss:ID='sLeft'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+</Style>
+<Style ss:ID='sBoldWrap'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+<Style ss:ID='sBorder'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sBoldBorder'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+<Style ss:ID='sBorderBold11'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='11' ss:Bold='1'/></Style>
+<Style ss:ID='sBorderRightBold11'>
+<Alignment ss:Horizontal='Right' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='11' ss:Bold='1'/></Style>
+<Style ss:ID='sBorder12'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='12'/></Style>
+<Style ss:ID='sBoldBorderWrap'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+<Style ss:ID='sCenter'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+</Style>
+<Style ss:ID='sCenterBold'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+<Style ss:ID='sCenterBoldBorder'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+<Style ss:ID='sCenterBoldWrap'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+<Style ss:ID='sCenter12'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='12'/></Style>
+<Style ss:ID='sCenterBorder'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sCenterBorderBold11'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='11' ss:Bold='1'/></Style>
+<Style ss:ID='sCenterWrapBorder'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sCenterWrapBorderBold'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+<Style ss:ID='sCenterWrapBorderBottomDash'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Dash' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sCenterWrapBorderBottomNo'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sCenterWrapBorderTopDash'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sCenterWrapBorderBottomDashLCont'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='2'/>
+<Border ss:Position='Bottom' ss:LineStyle='Dash' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sCenterWrapBorderBottomNoLCont'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='2'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sCenterWrapBorderTopDashLCont'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='2'/>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sCenterWrapBorderLCont'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='2'/>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sCenterBorderLCont'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='2'/>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sVertWrapBorderLCont'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Bottom' ss:Rotate='90' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='2'/>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sCenterWrapBorderTopDashNarrow9'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Narrow' x:CharSet='204' ss:Size='9'/></Style>
+<Style ss:ID='sCenterWrapBorderTopDashLContNarrow9'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='2'/>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Narrow' x:CharSet='204' ss:Size='9'/></Style>
+<Style ss:ID='sCenterWrap'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+</Borders>
+</Style>
+<Style ss:ID='sBottom'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sBottomLeft'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sVert'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Bottom' ss:Rotate='90'/>
+<Borders>
+</Borders>
+</Style>
+<Style ss:ID='sVertWrap'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Bottom' ss:Rotate='90' ss:WrapText='1'/>
+<Borders>
+</Borders>
+</Style>
+<Style ss:ID='sVertBorder'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Bottom' ss:Rotate='90'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sVertBorderBold11'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Bottom' ss:Rotate='90'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='11' ss:Bold='1'/></Style>
+<Style ss:ID='sVertWrapBorder'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Bottom' ss:Rotate='90' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sVertWrapBorder2'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:Rotate='90' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+<Style ss:ID='sVertWrapBorder3'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:Rotate='90' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sWrap'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+</Borders>
+</Style>
+<Style ss:ID='sWrapBorder'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sWrapBorderUp'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Top' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sUnderline11'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='11'/></Style>
+<Style ss:ID='sUnderline'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sUnderlineText'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='11' ss:Underline='Single'/></Style>
+<Style ss:ID='sUnderlineText2'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Underline='Single'/></Style>
+<Style ss:ID='sUnderlineText3'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Underline='Single'/></Style>
+<Style ss:ID='sLeftBold13'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='13' ss:Bold='1'/></Style>
+<Style ss:ID='sLeftBoldItalic11'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='11' ss:Bold='1' ss:Italic='1'/></Style>
+<Style ss:ID='sLeft11'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='11'/></Style>
+<Style ss:ID='sCenterUnderline'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sRightBorder'>
+<Alignment ss:Horizontal='Right' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sRightBoldBorder'>
+<Alignment ss:Horizontal='Right' ss:Vertical='Center'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+<Style ss:ID='sRight'>
+<Alignment ss:Horizontal='Right' ss:Vertical='Center'/>
+<Borders>
+</Borders>
+</Style>
+<Style ss:ID='sXML_left_top'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Top' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sXML_center_top'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Top' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sXML_center_top8'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Top' ss:WrapText='1'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='8'/></Style>
+<Style ss:ID='sXML_center'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='8'/></Style>
+<Style ss:ID='sXML_center_topbottom'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Top' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='8'/></Style>
+<Style ss:ID='sXML_right_top'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Top' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sXML_left_center'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sXML_center_center'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sXML_right_center'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sXML_left_bottom'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Bottom' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sXML_center_bottom'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Bottom' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sXML_right_bottom'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Bottom' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sXML_left_middle'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sXML_center_middle'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sXML_right_middle'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+</Style>
+<Style ss:ID='sTitleRight'>
+<Alignment ss:Horizontal='Right' ss:Vertical='Center' ss:Rotate='0' ss:WrapText='1'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='8' ss:Italic='1'/></Style>
+<Style ss:ID='sTitle'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:Rotate='0' ss:WrapText='1'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='12' ss:Bold='1'/></Style>
+<Style ss:ID='sTitleRem'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:Rotate='0' ss:WrapText='1'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='10' ss:Italic='1'/></Style>
+<Style ss:ID='sTitleLeft'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center' ss:Rotate='0' ss:WrapText='1'/>
+<Borders>
+</Borders>
+<Font ss:FontName='Arial Cyr' x:CharSet='204' ss:Size='12' ss:Bold='1'/></Style>
+<Style ss:ID='sHeader'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:Rotate='0' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='10'/></Style>
+<Style ss:ID='sHeader8'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:Rotate='0' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8'/></Style>
+<Style ss:ID='sHeader6'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:Rotate='0' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='6'/></Style>
+<Style ss:ID='sHeader8_vert'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Bottom' ss:Rotate='90' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8'/></Style>
+<Style ss:ID='sString'>
+<Alignment ss:Horizontal='Left' ss:Vertical='Center' ss:Rotate='0' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8'/></Style>
+<Style ss:ID='sStringCenter'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:Rotate='0' ss:WrapText='1'/>
+<NumberFormat ss:Format='@'/><Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8'/></Style>
+<Style ss:ID='sDate'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:Rotate='0' ss:WrapText='1'/>
+<NumberFormat ss:Format='dd.mm.yy'/><Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8'/></Style>
+<Style ss:ID='sNum_2'>
+<Alignment ss:Horizontal='Right' ss:Vertical='Center' ss:Rotate='0'/>
+<NumberFormat ss:Format='#,##0.00'/><Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8'/></Style>
+<Style ss:ID='sNum_3'>
+<Alignment ss:Horizontal='Right' ss:Vertical='Center' ss:Rotate='0'/>
+<NumberFormat ss:Format='#,##0.000'/><Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8'/></Style>
+<Style ss:ID='sNum_0'>
+<Alignment ss:Horizontal='Right' ss:Vertical='Center' ss:Rotate='0'/>
+<NumberFormat ss:Format='#,##0'/><Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8'/></Style>
+<Style ss:ID='sNum_0_center'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:Rotate='0'/>
+<NumberFormat ss:Format='#,##0'/><Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8'/></Style>
+<Style ss:ID='sNumBold_2'>
+<Alignment ss:Horizontal='Right' ss:Vertical='Center' ss:Rotate='0'/>
+<NumberFormat ss:Format='#,##0.00'/><Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8' ss:Bold='1'/></Style>
+<Style ss:ID='sNumBold_0'>
+<Alignment ss:Horizontal='Right' ss:Vertical='Center' ss:Rotate='0'/>
+<NumberFormat ss:Format='#,##0'/><Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8' ss:Bold='1'/></Style>
+<Style ss:ID='sNumBold_0_center'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:Rotate='0'/>
+<NumberFormat ss:Format='#,##0'/><Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8' ss:Bold='1'/></Style>
+<Style ss:ID='sStringItogo'>
+<Alignment ss:Horizontal='Right' ss:Vertical='Center' ss:Rotate='0' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='8' ss:Bold='1' ss:Italic='1'/></Style>
+<Style ss:ID='sGroupTitle'>
+<Alignment ss:Horizontal='Center' ss:Vertical='Center' ss:Rotate='0' ss:WrapText='1'/>
+<Borders>
+<Border ss:Position='Bottom' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Left' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Right' ss:LineStyle='Continuous' ss:Weight='1'/>
+<Border ss:Position='Top' ss:LineStyle='Continuous' ss:Weight='1'/>
+</Borders>
+<Font ss:FontName='Times New Roman' x:CharSet='204' ss:Size='10' ss:Bold='1'/></Style>
+</Styles>
+<Worksheet ss:Name='Sheet1'>
+<Table ss:ExpandedColumnCount='13' ss:ExpandedRowCount='26' x:FullColumns='1' x:FullRows='1'>
+<Column ss:AutoFitWidth='0' ss:Width='120'/>
+<Column ss:AutoFitWidth='0' ss:Width='210'/>
+<Column ss:AutoFitWidth='0' ss:Width='60'/>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBold'><Data ss:Type='String'>Группа: 4 20ПКС-1, 20-21</Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBold'><Data ss:Type='String'>Студент: Баранник А. П.</Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+</Row>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBoldBorder'><Data ss:Type='String'>Дисциплина</Data></Cell>
+<Cell ss:StyleID='sCenterWrapBorderBold'><Data ss:Type='String'>оценки - VII семестр</Data></Cell>
+<Cell ss:StyleID='sCenterWrapBorderBold'><Data ss:Type='String'>VII семестр</Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBoldBorder'><Data ss:Type='String'>Иностранный язык</Data></Cell>
+<Cell ss:StyleID='sBorder12'><Data ss:Type='String'>Н Н 5 Н 5 2 2 Н 4 Н 4 О Н 5 О 4 5 4 4</Data></Cell>
+<Cell ss:StyleID='sRightBorder'><Data ss:Type='String'> (4.00) 8</Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBoldBorder'><Data ss:Type='String'>Физическая культура</Data></Cell>
+<Cell ss:StyleID='sBorder12'><Data ss:Type='String'>4 Н Н Н Н Н Н</Data></Cell>
+<Cell ss:StyleID='sRightBorder'><Data ss:Type='String'></Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBoldBorder'><Data ss:Type='String'>Правовое обеспечение профессиональной деятельности</Data></Cell>
+<Cell ss:StyleID='sBorder12'><Data ss:Type='String'>4 4 5 Н Н Н 4 Н Н Н 5 Н Н 5 5</Data></Cell>
+<Cell ss:StyleID='sRightBorder'><Data ss:Type='String'> (4.57) 11</Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBoldBorder'><Data ss:Type='String'>Математические методы</Data></Cell>
+<Cell ss:StyleID='sBorder12'><Data ss:Type='String'>5 5 4 2 2 5 5 5 4 2 2 2 4 2 2 2 Н 4 2 2 2 Н 5 2 2 2 4 Н 2 2 2 2 4 2 2 2 Н 2 2 2 2 2 2 2 2 Н Н</Data></Cell>
+<Cell ss:StyleID='sRightBorder'><Data ss:Type='String'> (2.73) 9</Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBoldBorder'><Data ss:Type='String'>Основы web-программирования</Data></Cell>
+<Cell ss:StyleID='sBorder12'><Data ss:Type='String'>5 5 5 Н 5 5 5 5 5 5 5 5 5 Н</Data></Cell>
+<Cell ss:StyleID='sRightBorder'><Data ss:Type='String'> (5.00) 1</Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBoldBorder'><Data ss:Type='String'>МДК 03.02 Инструментальные средства разработки программного обеспечения</Data></Cell>
+<Cell ss:StyleID='sBorder12'><Data ss:Type='String'>Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н Н 3 Н Н Н Н Н Н 4 Н Н Н Н Н Н</Data></Cell>
+<Cell ss:StyleID='sRightBorder'><Data ss:Type='String'></Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBoldBorder'><Data ss:Type='String'>МДК.03.03 Документирование и сертификация</Data></Cell>
+<Cell ss:StyleID='sBorder12'><Data ss:Type='String'>5 Н 5 4 Н Н Н 5 5 5 5 5</Data></Cell>
+<Cell ss:StyleID='sRightBorder'><Data ss:Type='String'> (4.88) 4</Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBoldBorder'><Data ss:Type='String'>Информационная безопасность</Data></Cell>
+<Cell ss:StyleID='sBorder12'><Data ss:Type='String'>4 5 5 Н 2 Н Н 5 Н Н 5 Н Н 2 Н 4 Н Н Н Н 4 4 5 5 4 5 5 4 Н О Н Н Н Н Н</Data></Cell>
+<Cell ss:StyleID='sRightBorder'><Data ss:Type='String'> (4.25) 8</Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBoldBorder'><Data ss:Type='String'>Математические методы (курсовой проект)</Data></Cell>
+<Cell ss:StyleID='sBorder12'><Data ss:Type='String'>Н 2 Н Н Н Н 2 Н 2 Н Н 2</Data></Cell>
+<Cell ss:StyleID='sRightBorder'><Data ss:Type='String'> (2.00) 12</Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+<Cell ss:StyleID='sBoldBorder'><Data ss:Type='String'>ПП.03.02 Производственная практика</Data></Cell>
+<Cell ss:StyleID='sBorder12'><Data ss:Type='String'>4 5 5 4 4 5</Data></Cell>
+<Cell ss:StyleID='sRightBorder'><Data ss:Type='String'> (4.50) 4</Data></Cell>
+</Row>
+<Row ss:AutoFitHeight='1'>
+</Row>
+</Table>
+<WorksheetOptions xmlns='urn:schemas-microsoft-com:office:excel'>
+<PageSetup>
+<PageMargins x:Bottom='0.78740157480314954' x:Left='0.78740157480314954' x:Right='0.78740157480314954' x:Top='0.78740157480314954'/>
+</PageSetup>
+<Print>
+<ValidPrinterInfo/>
+<PaperSizeIndex>9</PaperSizeIndex>
+<HorizontalResolution>600</HorizontalResolution>
+<VerticalResolution>600</VerticalResolution>
+</Print>
+<Zoom>90</Zoom>
+<Selected/>
+<Panes>
+<Pane>
+<Number>3</Number>
+<ActiveRow>13</ActiveRow>
+<ActiveCol>3</ActiveCol>
+</Pane>
+</Panes>
+<ProtectObjects>False</ProtectObjects>
+<ProtectScenarios>False</ProtectScenarios>
+</WorksheetOptions>
+</Worksheet>
+</Workbook>
