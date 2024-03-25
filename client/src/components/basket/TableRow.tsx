@@ -86,6 +86,9 @@ const deleteBtnHandler = (userId:number, id:number)=>{
         <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
             {price}
         </td>
+        <td className="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+            {price*value}
+        </td>
         <td className="px-6 py-4">
             <button onClick={()=> { 
                 deleteBtnHandler(userId,id)

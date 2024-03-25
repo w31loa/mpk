@@ -43,6 +43,9 @@ const Requests = () => {
                           Дата
                       </th>
                       <th scope="col" className="px-6 py-3">
+                          Общая стоимость
+                      </th>
+                      <th scope="col" className="px-6 py-3">
                           Статус
                       </th>
                   </tr>

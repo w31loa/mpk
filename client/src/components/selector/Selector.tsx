@@ -10,10 +10,16 @@ export interface IServiceSelector {
 }
 
 
-const {data} = await instance.get('/service')
 
+const {data} = await instance.get('/service')
 const Selector:FC<any> = ({selectedService, setSelectedService}) => {
 
+    // const[category , setCategory] = useState<ICategory[]>()
+    // const getCategoryData = async()=>{
+    //     const {data}= await instance.get(`service-category`)
+    //     setCategory(data)
+    // }
+    console.log(data)
     const services: IServiceSelector[] = data.map((el:any)=>{
         return {
          name: el.title,
@@ -21,6 +27,7 @@ const Selector:FC<any> = ({selectedService, setSelectedService}) => {
         }
     })
 
+    services.unshift({name: "Нет услуги" , id:0})
 
 
     const selectedCountryTemplate = (option: IServiceSelector, props) => {

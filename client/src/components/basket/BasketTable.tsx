@@ -19,10 +19,13 @@ const BasketTable:FC<any> = (data:IBasketParams) => {
                 Название
             </th>
             <th scope="col" className="px-6 py-5">
-                Количество
+                Количество( m²)
             </th>
             <th scope="col" className="px-6 py-5">
                 Цена
+            </th>
+            <th scope="col" className="px-6 py-5">
+                Стоимость
             </th>
             <th scope="col" className="px-6 py-5">
                 

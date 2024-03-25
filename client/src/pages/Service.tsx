@@ -46,11 +46,10 @@ export const Service = () => {
                     <div className="text-2xl">Описание:</div>
                     <div className="text-xl text-gray-500 pl-5">
                       {service.description}
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quidem fugiat, repellat minus saepe dolorem ad possimus similique aperiam suscipit repellendus quam quae voluptatibus, unde itaque! Cum iste sed voluptatum.
                     </div>
                     
                   </div>
-                  <div className="text-black text-2xl  mb-5"> Цена: {service.price} ₽ </div>
+                  <div className="text-black text-2xl  mb-5 flex flex-col"> Цена: {service.price} ₽   <small className='text-sm'>за 1 m²</small></div>
                   <button className='px-8 py-4 btn-black' onClick={openModalHandler}>Заказать</button>
 
             </div>

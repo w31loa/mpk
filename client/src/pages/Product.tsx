@@ -84,7 +84,7 @@ export const Product = () => {
                       </div>
                       
                     </div>
-                    <div className="text-black text-2xl  mb-5"> Цена: {product.price}₽ </div>
+                    <div className="text-black text-2xl  mb-5 flex flex-col"> Цена: {product.price}₽  <small className='text-sm'>за 1 m²</small></div>
                     <button type='submit' className='px-8 py-4 btn-black' onClick={addBtnHandler} >Добавить в карзину</button>
 
               </Form>

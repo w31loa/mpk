@@ -59,7 +59,7 @@ const OrderForm = ({serviceId}) => {
                 !serviceId&&(
                     <div className="mb-5">    
                       <label htmlFor="email" className="block mb-2 text-xl font-medium text-gray-900">Услуга</label>
-          
+                      
                       <Selector selectedService={selectedService} setSelectedService={setSelectedService}/>
                   
                     </div>
