@@ -1,4 +1,4 @@
-import { Form, useLoaderData, useParams } from 'react-router-dom'
+import { Form, Link, useLoaderData, useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { IMAGE_URL, instance } from '../api/axios.api'
 import { IProduct } from '../types/types'
@@ -75,7 +75,7 @@ export const Product = () => {
                   <div className="text-black text-5xl font-bold text-left mb-7 ">{product.title}</div>
 
                     <input type="hidden" name="productId" value={product.id}/>
-                    <input type="hidden" name="userId" value={Number(Object.values(user)[0])}/>
+                    <input type="hidden" name="userId" value={user?Number(Object.values(user)[0]) : ''}/>
 
                     <div className="text-black text-3xl mb-10">
                       <div className="text-2xl">Описание:</div>
@@ -85,7 +85,11 @@ export const Product = () => {
                       
                     </div>
                     <div className="text-black text-2xl  mb-5 flex flex-col"> Цена: {product.price}₽  <small className='text-sm'>за 1 m²</small></div>
-                    <button type='submit' className='px-8 py-4 btn-black' onClick={addBtnHandler} >Добавить в карзину</button>
+                    
+                    {
+                      isAuth?<button type='submit' className='px-8 py-4 btn-black' onClick={addBtnHandler} >Добавить в карзину</button>
+                      :<Link to={'/profile'} type='submit' className='px-8 py-4 btn-black' >Войти</Link>
+                    }
 
               </Form>
 

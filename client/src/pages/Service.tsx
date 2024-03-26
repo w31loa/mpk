@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from 'react-router-dom'
+import { Link, useLoaderData, useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { IMAGE_URL, instance } from '../api/axios.api'
 import { IService } from '../types/types'
@@ -6,6 +6,7 @@ import { ModalContext } from '../context/modal.context'
 import { useContext } from 'react'
 import Modal from '../components/Modal'
 import OrderForm from '../components/OrderForm'
+import { useDispatch, useSelector } from 'react-redux'
 
 
 
@@ -24,6 +25,11 @@ export const Service = () => {
     const {modal, close, open} = useContext(ModalContext)
     const openModalHandler = () => open() 
     const сloseModalHandler = () => close()
+
+    const dispatch = useDispatch()
+    const {user, isAuth} = useSelector(state=>{
+        return state.user 
+    })
 
 
     const btnHandler = ()=>{
@@ -50,7 +56,12 @@ export const Service = () => {
                     
                   </div>
                   <div className="text-black text-2xl  mb-5 flex flex-col"> Цена: {service.price} ₽   <small className='text-sm'>за 1 m²</small></div>
-                  <button className='px-8 py-4 btn-black' onClick={openModalHandler}>Заказать</button>
+                  {/* <button className='px-8 py-4 btn-black' onClick={openModalHandler}>Заказать</button> */}
+
+                  {
+                      isAuth?<button className='px-8 py-4 btn-black' onClick={openModalHandler}>Заказать</button>
+                      :<Link to={'/profile'} type='submit' className='px-8 py-4 btn-black'>Войти</Link>
+                    }
 
             </div>
 
